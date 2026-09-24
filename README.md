@@ -44,7 +44,7 @@ Run it with a video file:
 The script will generate:
 
 ```text
-video_final.mp4
+video_processed.mp4
 video.srt
 ```
 
@@ -94,7 +94,7 @@ Generating subtitles...
 Subtitles saved to: recording.srt
 
 Done.
-Video: recording_final.mp4
+Video: recording_processed.mp4
 Subtitles: recording.srt
 ```
 
@@ -113,4 +113,4 @@ The goal is to keep the workflow simple: one input video, one processed video, a
 If you want the subtitles to be permanently visible in the video, you can burn the SRT file into the processed video using FFmpeg:
 
 ```bash
-ffmpeg -i video_final.mp4 -vf "subtitles=video.srt" -c:a copy video_subtitled.mp4
+ffmpeg -i video_processed.mp4 -vf "subtitles=video.srt" -c:a copy video_subtitled.mp4
